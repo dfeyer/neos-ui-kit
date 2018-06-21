@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
-  <script src="/build/mycomponent.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="/build/neos.css" />
+  <script src="/build/neos.js"></script>
 
 </head>
 <body>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <neos-form-input label="Fill a small bit of personal informations"></neos-form-input>
+  <neos-form-input label="Fill a small bit of personal informations" placeholder="Help editor to fill me..."></neos-form-input>
+  <neos-form-input label="Fill a small bit of personal informations" value="Your input value" placeholder="Help editor to fill me..."></neos-form-input>
 
 </body>
 </html>

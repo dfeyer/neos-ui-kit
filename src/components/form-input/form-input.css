@@ -1,0 +1,30 @@
+label,
+input {
+  color: var(--neos-color-text-default);
+  font-family: var(--neos-font-family-default);
+  font-weight: var(--neos-font-weight-normal);
+  font-size: var(--neos-font-size-base);
+}
+
+input {
+  background-color: var(--neos-color-contrast-neutral);
+  padding: var(--neos-unit-full);
+  margin-bottom: var(--neos-unit-full);
+  margin-top: var(--neos-unit-quarter);
+  width: 100%;
+  border: 0;
+  outline: 1px solid var(--neos-color-contrast-neutral);
+  box-sizing: border-box;
+
+  transition: all ease-in var(--neos-transition-fast);
+}
+
+input:focus,
+input:hover {
+  outline: 1px solid var(--neos-color-primary-blue);
+}
+
+input:focus {
+  background-color: var(--neos-color-contrast-brightest);
+  color: var(--neos-color-text-inversed);
+}

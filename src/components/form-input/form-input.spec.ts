@@ -1,9 +1,9 @@
 import { TestWindow } from '@stencil/core/testing';
-import { MyComponent } from './my-component';
+import { FormInput } from './form-input';
 
 describe('my-component', () => {
   it('should build', () => {
-    expect(new MyComponent()).toBeTruthy();
+    expect(new FormInput()).toBeTruthy();
   });
 
   describe('rendering', () => {
@@ -12,8 +12,8 @@ describe('my-component', () => {
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [MyComponent],
-        html: '<my-component></my-component>'
+        components: [FormInput],
+        html: '<neos-form-input></neos-form-input>'
       });
     });
 

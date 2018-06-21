@@ -1,10 +1,11 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'neos',
+  globalStyle: 'src/global/variables.css',
   outputTargets:[
-    { 
-      type: 'dist' 
+    {
+      type: 'dist'
     },
-    { 
+    {
       type: 'www',
       serviceWorker: false
     }
