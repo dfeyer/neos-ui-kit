@@ -1,0 +1,26 @@
+@import "./neos.theme.default";
+
+// Neos CMS Default Dark Theme
+// ----------------------------------
+$colors-dark:      () !default;
+$neos-colors-dark:  ();
+$colors-dark: neos-extend-colors($colors, $neos-colors-dark, $colors-dark);
+
+// Material Design General
+// --------------------------------------------------
+$content-dark-margin:                         $content-margin !default;
+$content-dark-padding:                        $content-padding !default;
+$font-family-dark-base:                       "Roboto", "Helvetica Neue", sans-serif !default;
+$font-size-dark-base:                         $font-size-base !default;
+
+// Default Foreground and Background Colors values
+// Allows users to override an foreground / background colors
+// TODO: @color-mod: remove all this
+$background-dark-color-value:                 $background-color-value !default;
+$text-dark-color-value:                       $text-color-value !default;
+
+// Default Material Design Foreground and Background Colors
+// --------------------------------------------------
+$background-dark-color:                       css-var($background-dark-color-value, background-dark-color) !default;
+$text-dark-color:                             css-var($text-dark-color-value, text-dark-color) !default;
+$placeholder-text-dark-color:                 css-var($placeholder-text-color, placeholder-text-dark-color) !default;

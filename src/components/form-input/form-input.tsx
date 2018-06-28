@@ -2,7 +2,7 @@ import {Component, Prop} from '@stencil/core';
 
 @Component({
   tag: 'neos-form-input',
-  styleUrl: 'form-input.css',
+  styleUrl: 'styles/form-input.dark.scss',
   shadow: true
 })
 export class FormInput {
@@ -27,7 +27,7 @@ export class FormInput {
       </label>
     );
   }
-  
+
   render() {
     return this.label ? this.renderInputWithLabel() : this.renderInput();
   }

@@ -1,0 +1,155 @@
+@import "./neos.globals";
+
+// Default Theme
+// ----------------------------------
+
+// Private color variables, use colors() to override
+$primary:         #00ADEE;
+$secondary:       #26224C;
+
+$success:         #00a338;
+$warning:         #ff8700;
+$danger:          #ff460d;
+
+$darkest:         #141414;
+$darker:          #222222;
+$dark:            #3f3f3f;
+$neutral:         #323232;
+$bright:          #999999;
+$brighter:        #adadad;
+$brightest:       #ffffff;
+
+// Allows users to override an individual color
+$colors:              () !default;
+
+// Primary color map should provide
+//   - base: main color to be used.
+//   - rgb: a R,G,B list version of the base color. Used for alpha processing
+//   - contrast: Color that will provide readable text against the base color
+//   - shade: 12% darker version of the base color (mix with black)
+//   - tint: 10% lighter version of the base color (mix with white)
+$neos-colors:  (
+  primary: (
+    base:             $primary,
+    contrast:         #fff,
+    rgb:              color-to-rgb-list($primary),
+    shade:            get-color-shade($primary),
+    tint:             get-color-tint($primary)
+  ),
+  secondary: (
+    base:             $secondary,
+    contrast:         #fff,
+    rgb:              color-to-rgb-list($secondary),
+    shade:            get-color-shade($secondary),
+    tint:             get-color-tint($secondary)
+  ),
+  success: (
+    base:             $success,
+    contrast:         #fff,
+    rgb:              color-to-rgb-list($success),
+    shade:            get-color-shade($success),
+    tint:             get-color-tint($success)
+  ),
+  warning: (
+    base:             $warning,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($warning),
+    shade:            get-color-shade($warning),
+    tint:             get-color-tint($warning)
+  ),
+  danger: (
+    base:             $danger,
+    contrast:         #fff,
+    rgb:              color-to-rgb-list($danger),
+    shade:            get-color-shade($danger),
+    tint:             get-color-tint($danger)
+  ),
+  brightest: (
+    base:             $brightest,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($brightest),
+    shade:            get-color-shade($brightest),
+    tint:             get-color-tint($brightest)
+  ),
+  brighter: (
+    base:             $brighter,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($brighter),
+    shade:            get-color-shade($brighter),
+    tint:             get-color-tint($brighter)
+  ),
+  bright: (
+    base:             $bright,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($bright),
+    shade:            get-color-shade($bright),
+    tint:             get-color-tint($bright)
+  ),
+  neutral: (
+    base:             $neutral,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($neutral),
+    shade:            get-color-shade($neutral),
+    tint:             get-color-tint($neutral)
+  ),
+  dark: (
+    base:             $dark,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($dark),
+    shade:            get-color-shade($dark),
+    tint:             get-color-tint($dark)
+  ),
+  darker: (
+    base:             $darker,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($darker),
+    shade:            get-color-shade($darker),
+    tint:             get-color-tint($darker)
+  ),
+  darkest: (
+    base:             $darkest,
+    contrast:         #000,
+    rgb:              color-to-rgb-list($darkest),
+    shade:            get-color-shade($darkest),
+    tint:             get-color-tint($darkest)
+  ),
+);
+$colors:                                neos-extend-colors($neos-colors, $colors);
+
+// Default Alpha levels
+// --------------------------------------------------
+$alpha-activated:                       css-var(.1, alpha-activated) !default;
+$alpha-border-low:                      css-var(.1, alpha-border-low) !default;
+$alpha-border-medium:                   css-var(.2, alpha-border-medium) !default;
+$alpha-border-high:                     css-var(.3, alpha-border-high) !default;
+$alpha-disabled:                        css-var(.5, alpha-disabled) !default;
+$alpha-focused:                         css-var(.25, alpha-focused) !default;
+$alpha-hover:                           css-var(.1, alpha-hover) !default;
+$alpha-lowest:                          css-var(.1, alpha-lowest) !default;
+$alpha-low:                             css-var(.25, alpha-low) !default;
+$alpha-medium:                          css-var(.5, alpha-medium) !default;
+$alpha-high:                            css-var(.8, alpha-high) !default;
+$alpha-highest:                         css-var(.9, alpha-highest) !default;
+
+// Default General
+// --------------------------------------------------
+$content-margin-small:                  4px !default;
+$content-margin-medium:                 8px !default;
+$content-margin:                        16px !default;
+$content-padding:                       16px !default;
+$font-family-base:                      "Open Sans", Helvetica, serif;
+$font-size-base:                        14px !default;
+$font-size-small:                       12px !default;
+
+// Default Foreground and Background Colors values
+// Allows users to override an foreground / background colors
+// TODO: @color-mod: remove all this
+$background-color-value:                $neutral !default;
+$text-color-value:                      $brightest !default;
+$placeholder-color-value:               $brightest !default;
+
+// Default Foreground and Background Colors
+// --------------------------------------------------
+$background-color:                      css-var($background-color-value, background-color) !default;
+$text-color:                            css-var($text-color-value, text-color) !default;
+$placeholder-text-color:                css-var($placeholder-color-value, placeholder-text-color) !default;

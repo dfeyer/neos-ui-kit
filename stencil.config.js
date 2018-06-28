@@ -1,6 +1,14 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
   namespace: 'neos',
-  globalStyle: 'src/global/variables.css',
+  preamble: '(C) Neos Project https://neos.io - MIT License',
+  globalScript: 'src/global/neos-global.ts',
+  globalStyle: 'src/global/neos-global.scss',
+  enableCache: true,
+  plugins: [
+    sass(),
+  ],
   outputTargets:[
     {
       type: 'dist'

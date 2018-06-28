@@ -1,0 +1,31 @@
+@import "./form-input";
+@import "./form-input.dark.vars";
+
+:host {
+  color: $text-dark-color-value;
+  font-family: $font-family-dark-base;
+  font-weight: 400;
+  font-size: $font-size-dark-base;
+  margin-bottom: $content-dark-margin;
+
+  input {
+    background-color: $background-dark-color;
+    border: 0;
+    outline: 1px solid neos-color($colors-dark, 'neutral');
+    color: inherit;
+
+    padding: $content-padding;
+    margin: $content-margin-small 0;
+
+    &:focus,
+    &:hover {
+      outline: 1px solid neos-color($colors-dark, 'primary');
+    }
+
+    &:focus {
+      background-color: neos-color($colors-dark, 'brightest');
+      color: neos-color($colors-dark, 'brightest', 'contrast');
+      outline: 2px solid neos-color($colors-dark, 'brightest');
+    }
+  }
+}

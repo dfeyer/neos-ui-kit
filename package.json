@@ -21,9 +21,11 @@
   "devDependencies": {
     "@stencil/core": "^0.9.1",
     "@stencil/dev-server": "latest",
+    "@stencil/sass": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "sass-lint": "^1.12.1"
   },
   "repository": {
     "type": "git",
