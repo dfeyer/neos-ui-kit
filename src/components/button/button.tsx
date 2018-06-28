@@ -9,11 +9,13 @@ export class Button {
   @Prop() theme: string;
   @Prop() size: string = 'regular';
   @Prop() focused: boolean = false;
-  @Prop() disbaled: boolean = false;
+  @Prop() disabled: boolean = false;
   @Prop() active: boolean = false;
   @Prop() type: string = 'button';
 
   render() {
-    return <button class={this.theme} disabled={this.disbaled} type={this.type}><slot/></button>;
+    return (<button class={this.theme} disabled={this.disabled} type={this.type}>
+      <slot/>
+    </button>);
   }
 }

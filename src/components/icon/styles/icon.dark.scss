@@ -1,0 +1,6 @@
+@import "./icon";
+@import "./icon.dark.vars";
+
+:host {
+  color: $text-dark-color-value;
+}

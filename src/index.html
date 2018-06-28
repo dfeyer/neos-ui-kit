@@ -6,6 +6,7 @@
   <title>Stencil Component Starter</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="/build/neos.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <script src="/build/neos.js"></script>
   <style>
     h1 {
@@ -17,6 +18,10 @@
     section {
       border-top: 4px solid white;
       margin-bottom: 40px;
+    }
+    section section {
+      border-top: 0;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -44,10 +49,41 @@
   <header>
     <h1>neos-button</h1>
   </header>
-  <neos-button>Confirm</neos-button>
-  <neos-button theme="clean">Publish</neos-button>
-  <neos-button theme="brand">Did you love Neos?</neos-button>
-  <neos-button theme="warn">Delete</neos-button>
+  <section>
+    <neos-button>Confirm</neos-button>
+    <neos-button theme="clean">Publish</neos-button>
+    <neos-button theme="brand">Did you love Neos?</neos-button>
+    <neos-button theme="warn">Delete</neos-button>
+    <neos-button theme="warn" disabled>Delete</neos-button>
+  </section>
+  <section>
+    <neos-button>
+      <neos-icon name="folder"></neos-icon> Confirm
+    </neos-button>
+    <neos-button theme="clean">
+      <neos-icon name="folder"></neos-icon> Publish
+    </neos-button>
+    <neos-button theme="brand">
+      <neos-icon name="folder"></neos-icon> Did you love Neos?
+    </neos-button>
+    <neos-button theme="warn">
+      <neos-icon name="folder"></neos-icon> Delete
+    </neos-button>
+    <neos-button theme="warn" disabled>
+      <neos-icon name="frown"></neos-icon> Delete
+    </neos-button>
+  </section>
 </section>
+
+<section>
+  <header>
+    <h1>neos-icon</h1>
+  </header>
+  <neos-icon name="folder"></neos-icon>
+  <neos-icon name="folder" type="solid"></neos-icon>
+  <neos-icon name="edit"></neos-icon>
+  <neos-icon name="edit" type="solid"></neos-icon>
+</section>
+
 </body>
 </html>

@@ -7,7 +7,6 @@
   font-weight: 400;
   font-size: $font-size-dark-base;
   line-height: 1.1;
-  margin-bottom: $content-dark-margin;
 
   button {
     background-color: neos-color($colors-dark, 'neutral');
@@ -15,18 +14,18 @@
     color: neos-color($colors-dark, 'neutral', 'contrast');
 
     padding: $content-padding-medium;
-    margin: $content-margin-medium 0;
+    margin: 0;
 
-    &:focus,
-    &:hover {
+    &:focus:enabled,
+    &:hover:enabled {
       background-color: neos-color($colors-dark, 'neutral', 'shade');
     }
 
     &.clean {
       background-color: neos-color($colors-dark, 'success');
 
-      &:focus,
-      &:hover {
+      &:focus:enabled,
+      &:hover:enabled {
         background-color: neos-color($colors-dark, 'success', 'shade');
       }
     }
@@ -34,8 +33,8 @@
     &.brand {
       background-color: neos-color($colors-dark, 'primary');
 
-      &:focus,
-      &:hover {
+      &:focus:enabled,
+      &:hover:enabled {
         background-color: neos-color($colors-dark, 'primary', 'shade');
       }
     }
@@ -43,8 +42,8 @@
     &.lighter {
       background-color: neos-color($colors-dark, 'secondary');
 
-      &:focus,
-      &:hover {
+      &:focus:enabled,
+      &:hover:enabled {
         background-color: neos-color($colors-dark, 'secondary', 'shade');
       }
     }
@@ -56,10 +55,15 @@
     &.warn {
       background-color: neos-color($colors-dark, 'warning');
 
-      &:focus,
-      &:hover {
+      &:focus:enabled,
+      &:hover:enabled {
         background-color: neos-color($colors-dark, 'warning', 'shade');
       }
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: .65;
     }
   }
 }
