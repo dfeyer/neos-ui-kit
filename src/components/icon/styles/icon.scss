@@ -5,4 +5,12 @@
   @include font-smoothing();
 
   display: inline-block;
+
+  .l-squared {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+  }
 }

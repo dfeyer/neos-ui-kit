@@ -9,11 +9,16 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <script src="/build/neos.js"></script>
   <style>
-    h1 {
+    h1, h2 {
       color: white;
       font-family: "Roboto", "Helvetica Neue", sans-serif;
       font-weight: 600;
+      font-size: 24px;
       text-transform: uppercase;
+    }
+    h2 {
+      font-size: 18px;
+      text-transform: lowercase;
     }
     section {
       border-top: 4px solid white;
@@ -50,6 +55,9 @@
     <h1>neos-button</h1>
   </header>
   <section>
+    <header>
+      <h2>default</h2>
+    </header>
     <neos-button>Confirm</neos-button>
     <neos-button theme="clean">Publish</neos-button>
     <neos-button theme="brand">Did you love Neos?</neos-button>
@@ -57,6 +65,9 @@
     <neos-button theme="warn" disabled>Delete</neos-button>
   </section>
   <section>
+    <header>
+      <h2>with icon</h2>
+    </header>
     <neos-button>
       <neos-icon name="folder"></neos-icon> Confirm
     </neos-button>
@@ -74,6 +85,9 @@
     </neos-button>
   </section>
   <section>
+    <header>
+      <h2>squared</h2>
+    </header>
     <neos-button squared>
       <neos-icon name="folder"></neos-icon>
     </neos-button>
@@ -96,10 +110,24 @@
   <header>
     <h1>neos-icon</h1>
   </header>
-  <neos-icon name="folder"></neos-icon>
-  <neos-icon name="folder" type="solid"></neos-icon>
-  <neos-icon name="edit"></neos-icon>
-  <neos-icon name="edit" type="solid"></neos-icon>
+  <section>
+    <header>
+      <h2>default</h2>
+    </header>
+    <neos-icon name="folder"></neos-icon>
+    <neos-icon name="folder" type="solid"></neos-icon>
+    <neos-icon name="edit"></neos-icon>
+    <neos-icon name="edit" type="solid"></neos-icon>
+  </section>
+  <section>
+    <header>
+      <h2>squared</h2>
+    </header>
+    <neos-icon squared name="folder"></neos-icon>
+    <neos-icon squared name="folder" type="solid"></neos-icon>
+    <neos-icon squared name="edit"></neos-icon>
+    <neos-icon squared name="edit" type="solid"></neos-icon>
+  </section>
 </section>
 
 </body>
