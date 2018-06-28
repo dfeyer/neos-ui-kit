@@ -1,0 +1,11 @@
+@import "./label";
+@import "./label.dark.vars";
+
+:host {
+  color: $text-dark-color-value;
+  font-family: $font-family-dark-base;
+  font-weight: 400;
+  font-size: $font-size-dark-base;
+
+  margin-right: $content-margin-medium;
+}

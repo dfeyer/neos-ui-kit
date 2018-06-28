@@ -5,12 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="/build/neos.css" />
+  <link rel="stylesheet" href="/build/neos.css"/>
   <script src="/build/neos.js"></script>
+  <style>
+    h1 {
+      color: white;
+      font-family: "Roboto", "Helvetica Neue", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    section {
+      border-top: 4px solid white;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 <body style="background-color: #222222; padding: 2rem;">
+
+<section>
+  <header>
+    <h1>neos-form-input</h1>
+  </header>
   <neos-form-input label="Fill a small bit of personal informations"></neos-form-input>
   <neos-form-input label="Fill a small bit of personal informations" placeholder="Help editor to fill me..."></neos-form-input>
   <neos-form-input label="Fill a small bit of personal informations" value="Your input value" placeholder="Help editor to fill me..."></neos-form-input>
+</section>
+
+<section>
+  <header>
+    <h1>neos-badge</h1>
+  </header>
+  <neos-badge label="Switzerland"></neos-badge>
+  <neos-badge label="France"></neos-badge>
+  <neos-badge label="Germany"></neos-badge>
+</section>
+
+<section>
+  <header>
+    <h1>neos-button</h1>
+  </header>
+  <neos-button>Confirm</neos-button>
+  <neos-button theme="clean">Publish</neos-button>
+  <neos-button theme="brand">Did you love Neos?</neos-button>
+  <neos-button theme="warn">Delete</neos-button>
+</section>
 </body>
 </html>

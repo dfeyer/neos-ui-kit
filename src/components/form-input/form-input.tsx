@@ -22,7 +22,7 @@ export class FormInput {
   renderInputWithLabel() {
     return (
       <label>
-        {this.label}
+        <neos-label label={this.label}></neos-label>
         {this.renderInput()}
       </label>
     );

@@ -1,0 +1,65 @@
+@import "./button";
+@import "./button.dark.vars";
+
+:host {
+  color: $text-dark-color-value;
+  font-family: $font-family-dark-base;
+  font-weight: 400;
+  font-size: $font-size-dark-base;
+  line-height: 1.1;
+  margin-bottom: $content-dark-margin;
+
+  button {
+    background-color: neos-color($colors-dark, 'neutral');
+    border: 0;
+    color: neos-color($colors-dark, 'neutral', 'contrast');
+
+    padding: $content-padding-medium;
+    margin: $content-margin-medium 0;
+
+    &:focus,
+    &:hover {
+      background-color: neos-color($colors-dark, 'neutral', 'shade');
+    }
+
+    &.clean {
+      background-color: neos-color($colors-dark, 'success');
+
+      &:focus,
+      &:hover {
+        background-color: neos-color($colors-dark, 'success', 'shade');
+      }
+    }
+
+    &.brand {
+      background-color: neos-color($colors-dark, 'primary');
+
+      &:focus,
+      &:hover {
+        background-color: neos-color($colors-dark, 'primary', 'shade');
+      }
+    }
+
+    &.lighter {
+      background-color: neos-color($colors-dark, 'secondary');
+
+      &:focus,
+      &:hover {
+        background-color: neos-color($colors-dark, 'secondary', 'shade');
+      }
+    }
+
+    &.transparent {
+
+    }
+
+    &.warn {
+      background-color: neos-color($colors-dark, 'warning');
+
+      &:focus,
+      &:hover {
+        background-color: neos-color($colors-dark, 'warning', 'shade');
+      }
+    }
+  }
+}

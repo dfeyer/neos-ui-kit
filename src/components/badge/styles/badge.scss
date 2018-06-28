@@ -1,0 +1,7 @@
+@import "./badge.vars";
+
+:host {
+  @include font-smoothing();
+
+  display: inline-block;
+}

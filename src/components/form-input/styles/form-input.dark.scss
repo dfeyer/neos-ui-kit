@@ -6,6 +6,7 @@
   font-family: $font-family-dark-base;
   font-weight: 400;
   font-size: $font-size-dark-base;
+  line-height: 1.1;
   margin-bottom: $content-dark-margin;
 
   input {
@@ -14,8 +15,8 @@
     outline: 1px solid neos-color($colors-dark, 'neutral');
     color: inherit;
 
-    padding: $content-padding;
-    margin: $content-margin-small 0;
+    padding: $content-padding-medium;
+    margin: $content-margin-medium 0;
 
     &:focus,
     &:hover {

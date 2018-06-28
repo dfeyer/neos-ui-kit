@@ -11,7 +11,7 @@ $modes: (ios, md) !default;
 $css-variables: ();
 
 @function get-color-shade($color) {
-  @return mix(#000, $color, 12%);
+  @return mix(#000, $color, 16%);
 }
 
 @function get-color-tint($color) {

@@ -1,0 +1,19 @@
+@import "./badge";
+@import "./badge.dark.vars";
+
+:host {
+  background-color: $background-dark-color;
+  color: neos-color($colors-dark, 'brighter');
+  font-family: $font-family-dark-base;
+  font-weight: 600;
+  font-size: $font-size-dark-base;
+  line-height: inherit;
+  margin-right: $content-margin-small;
+  outline: 1px $background-dark-color solid;
+  padding: $content-padding-smaller;
+  cursor: default;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

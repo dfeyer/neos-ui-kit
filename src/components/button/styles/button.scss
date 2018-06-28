@@ -1,0 +1,15 @@
+@import "./button.vars";
+
+:host {
+  @include font-smoothing();
+
+  display: inline-block;
+
+  button {
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    transition: all ease-in-out 100ms;
+  }
+}

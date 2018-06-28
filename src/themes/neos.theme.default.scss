@@ -87,28 +87,28 @@ $neos-colors:  (
   ),
   neutral: (
     base:             $neutral,
-    contrast:         #000,
+    contrast:         #FFF,
     rgb:              color-to-rgb-list($neutral),
     shade:            get-color-shade($neutral),
     tint:             get-color-tint($neutral)
   ),
   dark: (
     base:             $dark,
-    contrast:         #000,
+    contrast:         #FFF,
     rgb:              color-to-rgb-list($dark),
     shade:            get-color-shade($dark),
     tint:             get-color-tint($dark)
   ),
   darker: (
     base:             $darker,
-    contrast:         #000,
+    contrast:         #FFF,
     rgb:              color-to-rgb-list($darker),
     shade:            get-color-shade($darker),
     tint:             get-color-tint($darker)
   ),
   darkest: (
     base:             $darkest,
-    contrast:         #000,
+    contrast:         #FFF,
     rgb:              color-to-rgb-list($darkest),
     shade:            get-color-shade($darkest),
     tint:             get-color-tint($darkest)
@@ -137,6 +137,9 @@ $content-margin-small:                  4px !default;
 $content-margin-medium:                 8px !default;
 $content-margin:                        16px !default;
 $content-padding:                       16px !default;
+$content-padding-medium:                12px 16px !default;
+$content-padding-small:                 4px 6px !default;
+$content-padding-smaller:               2px 4px !default;
 $font-family-base:                      "Open Sans", Helvetica, serif;
 $font-size-base:                        14px !default;
 $font-size-small:                       12px !default;
