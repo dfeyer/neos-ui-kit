@@ -1,4 +1,5 @@
 import {Component, Prop} from '@stencil/core';
+import classnames from 'classnames';
 
 @Component({
   tag: 'neos-button',
@@ -10,11 +11,16 @@ export class Button {
   @Prop() size: string = 'regular';
   @Prop() focused: boolean = false;
   @Prop() disabled: boolean = false;
+  @Prop() squared: boolean = false;
   @Prop() active: boolean = false;
   @Prop() type: string = 'button';
 
+  className() {
+    return classnames('t-' + this.theme, {'l-squared': this.squared});
+  }
+
   render() {
-    return (<button class={this.theme} disabled={this.disabled} type={this.type}>
+    return (<button class={this.className()} disabled={this.disabled} type={this.type}>
       <slot/>
     </button>);
   }

@@ -65,6 +65,7 @@ declare global {
       'disabled': boolean;
       'focused': boolean;
       'size': string;
+      'squared': boolean;
       'theme': string;
       'type': string;
     }
@@ -93,6 +94,7 @@ declare global {
       'disabled'?: boolean;
       'focused'?: boolean;
       'size'?: string;
+      'squared'?: boolean;
       'theme'?: string;
       'type'?: string;
     }

@@ -21,7 +21,7 @@
       background-color: neos-color($colors-dark, 'neutral', 'shade');
     }
 
-    &.clean {
+    &.t-clean {
       background-color: neos-color($colors-dark, 'success');
 
       &:focus:enabled,
@@ -30,7 +30,7 @@
       }
     }
 
-    &.brand {
+    &.t-brand {
       background-color: neos-color($colors-dark, 'primary');
 
       &:focus:enabled,
@@ -39,7 +39,7 @@
       }
     }
 
-    &.lighter {
+    &.t-lighter {
       background-color: neos-color($colors-dark, 'secondary');
 
       &:focus:enabled,
@@ -48,17 +48,25 @@
       }
     }
 
-    &.transparent {
+    &.t-transparent {
 
     }
 
-    &.warn {
+    &.t-warn {
       background-color: neos-color($colors-dark, 'warning');
 
       &:focus:enabled,
       &:hover:enabled {
         background-color: neos-color($colors-dark, 'warning', 'shade');
       }
+    }
+
+    &.l-squared {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
     }
 
     &[disabled] {

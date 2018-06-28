@@ -25,6 +25,7 @@
     "@stencil/sass": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
+    "classnames": "^2.2.6",
     "jest": "^21.2.1",
     "sass-lint": "^1.12.1"
   },
