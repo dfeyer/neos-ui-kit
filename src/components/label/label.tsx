@@ -1,4 +1,5 @@
 import {Component, Prop} from '@stencil/core';
+import classnames from 'classnames';
 
 @Component({
   tag: 'neos-label',
@@ -7,9 +8,14 @@ import {Component, Prop} from '@stencil/core';
 })
 export class Label {
 
+  @Prop() theme: string = 'regular';
   @Prop() label: string;
 
+  className() {
+    return classnames('t-' + this.theme);
+  }
+
   render() {
-    return this.label;
+    return <div class={this.className()}>{this.label}</div>;
   }
 }

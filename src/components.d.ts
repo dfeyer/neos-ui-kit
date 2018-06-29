@@ -179,14 +179,44 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface NeosInspectorGroupHeader {
+      'icon': string;
+      'label': string;
+    }
+  }
+
+  interface HTMLNeosInspectorGroupHeaderElement extends StencilComponents.NeosInspectorGroupHeader, HTMLStencilElement {}
+
+  var HTMLNeosInspectorGroupHeaderElement: {
+    prototype: HTMLNeosInspectorGroupHeaderElement;
+    new (): HTMLNeosInspectorGroupHeaderElement;
+  };
+  interface HTMLElementTagNameMap {
+    'neos-inspector-group-header': HTMLNeosInspectorGroupHeaderElement;
+  }
+  interface ElementTagNameMap {
+    'neos-inspector-group-header': HTMLNeosInspectorGroupHeaderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'neos-inspector-group-header': JSXElements.NeosInspectorGroupHeaderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NeosInspectorGroupHeaderAttributes extends HTMLAttributes {
+      'icon'?: string;
+      'label'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface NeosInspectorGroup {
-      'active': boolean;
-      'disabled': boolean;
-      'focused': boolean;
-      'size': string;
-      'squared': boolean;
-      'theme': string;
-      'type': string;
+      'icon': string;
+      'label': string;
     }
   }
 
@@ -209,13 +239,8 @@ declare global {
   }
   namespace JSXElements {
     export interface NeosInspectorGroupAttributes extends HTMLAttributes {
-      'active'?: boolean;
-      'disabled'?: boolean;
-      'focused'?: boolean;
-      'size'?: string;
-      'squared'?: boolean;
-      'theme'?: string;
-      'type'?: string;
+      'icon'?: string;
+      'label'?: string;
     }
   }
 }
@@ -226,6 +251,7 @@ declare global {
   namespace StencilComponents {
     interface NeosLabel {
       'label': string;
+      'theme': string;
     }
   }
 
@@ -249,6 +275,7 @@ declare global {
   namespace JSXElements {
     export interface NeosLabelAttributes extends HTMLAttributes {
       'label'?: string;
+      'theme'?: string;
     }
   }
 }

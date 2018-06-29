@@ -8,4 +8,9 @@
   font-size: $font-size-dark-base;
 
   margin-right: $content-margin-medium;
+
+  .t-bold {
+    font-size: $font-size-dark-large;
+    font-weight: 600;
+  }
 }
