@@ -1,0 +1,20 @@
+image:
+  name: node:latest
+  entrypoint: [""]
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  tags:
+  - docker
+  script:
+  - npm install
+  - npm run build
+  - mv dist public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
