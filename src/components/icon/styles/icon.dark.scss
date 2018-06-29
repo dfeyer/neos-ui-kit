@@ -19,4 +19,14 @@
     background-color: neos-color($colors-dark, 'success');
     color: neos-color($colors-dark, 'success', 'contrast');
   }
+
+  .t-warning {
+    background-color: neos-color($colors-dark, 'warning');
+    color: neos-color($colors-dark, 'warning', 'contrast');
+  }
+
+  .t-danger {
+    background-color: neos-color($colors-dark, 'danger');
+    color: neos-color($colors-dark, 'danger', 'contrast');
+  }
 }
