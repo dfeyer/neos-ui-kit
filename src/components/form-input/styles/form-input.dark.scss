@@ -10,19 +10,24 @@
   margin-bottom: $content-dark-margin;
 }
 
-::slotted(neos-icon:first-child) {
+.input ::slotted(neos-icon:first-child) {
   margin-right: 4px;
 }
 
-::slotted(neos-icon:last-child) {
+.input ::slotted(neos-icon:last-child) {
   margin-left: 4px;
 }
 
-::slotted(neos-button:first-child) {
+.input ::slotted(neos-button:first-child) {
   margin-right: 4px;
 }
 
-::slotted(neos-button:last-child) {
+.input ::slotted(neos-button:last-child) {
+  margin-left: 4px;
+}
+
+.metadata ::slotted(neos-badge) {
+  margin-right: 0;
   margin-left: 4px;
 }
 
