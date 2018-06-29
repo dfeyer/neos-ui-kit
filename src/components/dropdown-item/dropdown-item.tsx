@@ -12,13 +12,14 @@ export class DropdownItem {
   @Prop() icon: string;
   @Prop() iconType: string = 'solid';
 
-  neosItemSelectedHandler() {
+  neosItemSelectedHandler(e) {
+    e.preventDefault();
     this.neosItemSelected.emit(this.label);
   }
 
   render() {
     return (
-      <a href="#" class="dropdown-item" onClick={() => this.neosItemSelectedHandler()}>
+      <a href="#" class="dropdown-item" onClick={(e) => this.neosItemSelectedHandler(e)}>
         { this.icon ? <div class="icon">
           <neos-icon name={this.icon} type={this.iconType}/>
         </div> : null }

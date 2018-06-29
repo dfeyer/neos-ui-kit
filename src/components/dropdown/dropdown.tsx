@@ -25,7 +25,8 @@ export class Dropdown {
     this.activeLabel = this.selectedLabel;
   }
 
-  toggle() {
+  toggle(e) {
+    e.preventDefault();
     this.isOpen = !this.isOpen;
   }
 
@@ -40,7 +41,7 @@ export class Dropdown {
           <slot name="metadata"/>
         </neos-form-input-label>
         <div class={this.wrapperClassName()}>
-          <a href="#" class="dropdown" onClick={() => this.toggle()}>
+          <a href="#" class="dropdown" onClick={(e) => this.toggle(e)}>
             <div class="icon">
               <neos-icon name="file"/>
             </div>
