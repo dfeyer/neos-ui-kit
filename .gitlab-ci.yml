@@ -12,7 +12,7 @@ pages:
   script:
   - npm install
   - npm run build
-  - mv dist public
+  - mv www public
   artifacts:
     paths:
     - public
