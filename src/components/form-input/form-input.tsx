@@ -175,6 +175,9 @@ export class FormInput {
     this.neosChange.emit({value});
   }
 
+  componentDidLoad() {
+    this.neosInputDidLoad.emit();
+  }
 
   componentDidUnload() {
     this.nativeInput = undefined;
