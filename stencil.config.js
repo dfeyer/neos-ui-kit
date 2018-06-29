@@ -15,7 +15,8 @@ exports.config = {
     },
     {
       type: 'www',
-      serviceWorker: false
+      serviceWorker: false,
+      baseUrl: 'https://neos.go.ttree.space/neos-ui-kit/'
     }
   ]
 };
