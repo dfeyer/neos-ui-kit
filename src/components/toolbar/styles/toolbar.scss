@@ -1,0 +1,23 @@
+@import "./toolbar.vars";
+
+:host {
+  @include font-smoothing();
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    height: $grid-unit;
+  }
+
+  .zone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    ~ .zone {
+      margin-left: auto;
+    }
+  }
+}

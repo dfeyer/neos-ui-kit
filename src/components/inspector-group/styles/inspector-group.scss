@@ -1,0 +1,7 @@
+@import "./inspector-group.vars";
+
+:host {
+  @include font-smoothing();
+
+  display: block;
+}

@@ -18,7 +18,7 @@
 
     &:focus:enabled,
     &:hover:enabled {
-      background-color: neos-color($colors-dark, 'neutral', 'shade');
+      background-color: neos-color($colors-dark, 'primary', 'shade');
     }
 
     &.t-clean {
@@ -49,7 +49,12 @@
     }
 
     &.t-transparent {
+      background-color: transparent;
 
+      &:focus:enabled,
+      &:hover:enabled {
+        background-color: neos-color($colors-dark, 'primary', 'shade');
+      }
     }
 
     &.t-warn {

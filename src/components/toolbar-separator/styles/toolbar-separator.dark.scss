@@ -1,0 +1,9 @@
+@import "./toolbar-separator";
+@import "./toolbar-separator.dark.vars";
+
+:host {
+  margin: $content-margin-small;
+  height: calc(100% - #{$content-margin-small * 2});
+
+  border-left: $hairlines-width solid neos-color($colors-dark, 'bright');
+}

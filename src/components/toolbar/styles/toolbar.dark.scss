@@ -1,0 +1,14 @@
+@import "./toolbar";
+@import "./toolbar.dark.vars";
+
+:host {
+  width: 100%;
+
+  .t-regular {
+    background-color: neos-color($colors-dark, 'neutral');
+  }
+
+  .t-dark {
+    background-color: neos-color($colors-dark, 'darker');
+  }
+}

@@ -179,6 +179,51 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface NeosInspectorGroup {
+      'active': boolean;
+      'disabled': boolean;
+      'focused': boolean;
+      'size': string;
+      'squared': boolean;
+      'theme': string;
+      'type': string;
+    }
+  }
+
+  interface HTMLNeosInspectorGroupElement extends StencilComponents.NeosInspectorGroup, HTMLStencilElement {}
+
+  var HTMLNeosInspectorGroupElement: {
+    prototype: HTMLNeosInspectorGroupElement;
+    new (): HTMLNeosInspectorGroupElement;
+  };
+  interface HTMLElementTagNameMap {
+    'neos-inspector-group': HTMLNeosInspectorGroupElement;
+  }
+  interface ElementTagNameMap {
+    'neos-inspector-group': HTMLNeosInspectorGroupElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'neos-inspector-group': JSXElements.NeosInspectorGroupAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NeosInspectorGroupAttributes extends HTMLAttributes {
+      'active'?: boolean;
+      'disabled'?: boolean;
+      'focused'?: boolean;
+      'size'?: string;
+      'squared'?: boolean;
+      'theme'?: string;
+      'type'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface NeosLabel {
       'label': string;
     }
@@ -204,6 +249,72 @@ declare global {
   namespace JSXElements {
     export interface NeosLabelAttributes extends HTMLAttributes {
       'label'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface NeosToolbarSeparator {
+      'theme': string;
+    }
+  }
+
+  interface HTMLNeosToolbarSeparatorElement extends StencilComponents.NeosToolbarSeparator, HTMLStencilElement {}
+
+  var HTMLNeosToolbarSeparatorElement: {
+    prototype: HTMLNeosToolbarSeparatorElement;
+    new (): HTMLNeosToolbarSeparatorElement;
+  };
+  interface HTMLElementTagNameMap {
+    'neos-toolbar-separator': HTMLNeosToolbarSeparatorElement;
+  }
+  interface ElementTagNameMap {
+    'neos-toolbar-separator': HTMLNeosToolbarSeparatorElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'neos-toolbar-separator': JSXElements.NeosToolbarSeparatorAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NeosToolbarSeparatorAttributes extends HTMLAttributes {
+      'theme'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface NeosToolbar {
+      'theme': string;
+    }
+  }
+
+  interface HTMLNeosToolbarElement extends StencilComponents.NeosToolbar, HTMLStencilElement {}
+
+  var HTMLNeosToolbarElement: {
+    prototype: HTMLNeosToolbarElement;
+    new (): HTMLNeosToolbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'neos-toolbar': HTMLNeosToolbarElement;
+  }
+  interface ElementTagNameMap {
+    'neos-toolbar': HTMLNeosToolbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'neos-toolbar': JSXElements.NeosToolbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NeosToolbarAttributes extends HTMLAttributes {
+      'theme'?: string;
     }
   }
 }
