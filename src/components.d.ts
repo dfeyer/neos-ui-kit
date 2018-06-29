@@ -149,6 +149,7 @@ declare global {
     interface NeosIcon {
       'name': string;
       'squared': boolean;
+      'theme': string;
       'type': string;
     }
   }
@@ -174,6 +175,7 @@ declare global {
     export interface NeosIconAttributes extends HTMLAttributes {
       'name'?: string;
       'squared'?: boolean;
+      'theme'?: string;
       'type'?: string;
     }
   }

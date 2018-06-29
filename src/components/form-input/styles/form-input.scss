@@ -4,14 +4,20 @@
   @include font-smoothing();
 
   display: block;
+}
 
-  input {
-    width: 100%;
-    border: 0;
-    box-sizing: border-box;
-    height: $grid-unit;
-    line-height: $grid-unit;
+input {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  box-sizing: border-box;
+  height: $grid-unit;
+  line-height: $grid-unit;
 
-    transition: all ease-in 100ms;
-  }
+  transition: all ease-in 100ms;
+}
+
+.input {
+  display: flex;
+  align-items: center;
 }

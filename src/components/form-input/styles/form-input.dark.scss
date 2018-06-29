@@ -8,39 +8,56 @@
   font-size: $font-size-dark-base;
   line-height: 1.1;
   margin-bottom: $content-dark-margin;
+}
 
-  input {
-    background-color: $background-dark-color;
-    border: 0;
-    outline: 1px solid neos-color($colors-dark, 'neutral');
-    color: inherit;
+::slotted(neos-icon:first-child) {
+  margin-right: 4px;
+}
 
-    padding: 0 $content-padding;
-    margin: $content-margin-medium 0;
+::slotted(neos-icon:last-child) {
+  margin-left: 4px;
+}
 
-    &:focus:enabled,
-    &:hover:enabled {
-      outline: 1px solid neos-color($colors-dark, 'primary');
-    }
+::slotted(neos-button:first-child) {
+  margin-right: 4px;
+}
 
-    &:focus:enabled {
-      background-color: neos-color($colors-dark, 'brightest');
-      color: neos-color($colors-dark, 'brightest', 'contrast');
-      outline: 2px solid neos-color($colors-dark, 'brightest');
-    }
+::slotted(neos-button:last-child) {
+  margin-left: 4px;
+}
 
-    &[disabled] {
-      cursor: not-allowed;
-      opacity: .85;
-    }
+input {
+  background-color: $background-dark-color;
+  border: 0;
+  outline: 1px solid neos-color($colors-dark, 'darker');
+  box-sizing: content-box;
+  color: inherit;
+
+  padding: 0 $content-padding;
+  margin: $content-margin-medium 0;
+
+  &:focus:enabled,
+  &:hover:enabled {
+    outline: 1px solid neos-color($colors-dark, 'primary');
   }
 
-  .label {
-    display: flex;
-    align-items: center;
+  &:focus:enabled {
+    background-color: neos-color($colors-dark, 'brightest');
+    color: neos-color($colors-dark, 'brightest', 'contrast');
+    outline: 2px solid neos-color($colors-dark, 'brightest');
   }
 
-  .metadata {
-    margin-left: auto;
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: .85;
   }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.metadata {
+  margin-left: auto;
 }

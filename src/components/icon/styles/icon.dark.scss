@@ -4,4 +4,19 @@
 :host {
   color: $text-dark-color-value;
   font-size: $font-size-dark-base;
+
+  .t-regular {
+    background-color: transparent;
+    color: white;
+  }
+
+  .t-neutral {
+    background-color: neos-color($colors-dark, 'neutral');
+    color: neos-color($colors-dark, 'neutral', 'contrast');
+  }
+
+  .t-success {
+    background-color: neos-color($colors-dark, 'success');
+    color: neos-color($colors-dark, 'success', 'contrast');
+  }
 }

@@ -32,7 +32,9 @@ export class FormInput {
           </div>
         </div>
         <div class="input">
+          <slot name="before"/>
           {this.renderInput()}
+          <slot name="after"/>
         </div>
       </label>
     );

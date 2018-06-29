@@ -221,11 +221,18 @@
       <neos-form-input label="URI Path Segement" disabled value="my-good-blog-post">
         <neos-badge slot="metadata">readonly</neos-badge>
         <neos-badge slot="metadata">computed</neos-badge>
+        <neos-button squared theme="primary" slot="after">
+          <neos-icon name="sync" type="solid" disabled></neos-icon>
+        </neos-button>
       </neos-form-input>
     </neos-inspector-group>
     <neos-inspector-group icon="cogs" label="SEO">
       <neos-form-input label="Descritption" placeholder="A short and meanigful description of the document"></neos-form-input>
       <neos-form-input label="Keywords"></neos-form-input>
+      <neos-form-input label="Email" value="hello@neos.io">
+        <neos-icon squared name="at" type="solid" theme="neutral" slot="before"></neos-icon>
+        <neos-icon squared name="check-circle" type="solid" theme="success" slot="after"></neos-icon>
+      </neos-form-input>
     </neos-inspector-group>
   </section>
 </section>

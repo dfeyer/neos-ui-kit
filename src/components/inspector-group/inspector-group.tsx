@@ -10,7 +10,7 @@ export class InspectorGroup {
   @Prop() icon: string;
 
   render() {
-    return (<section>
+    return (<section role="group">
       <neos-inspector-group-header icon={this.icon} label={this.label}></neos-inspector-group-header>
       <div class="content">
         <slot/>
