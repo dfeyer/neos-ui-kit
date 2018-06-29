@@ -21,7 +21,7 @@ export class Button {
 
   render() {
     return (<button class={this.className()} disabled={this.disabled} type={this.type}>
-      <slot/>
+      <slot name="icon" /> <slot/>
     </button>);
   }
 }
