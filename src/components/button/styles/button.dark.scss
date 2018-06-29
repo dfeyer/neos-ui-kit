@@ -13,7 +13,7 @@
     border: 0;
     color: neos-color($colors-dark, 'neutral', 'contrast');
 
-    padding: $content-padding-medium;
+    padding: 0 $content-padding;
     margin: 0;
 
     &:focus:enabled,
@@ -65,8 +65,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 40px;
-      width: 40px;
+      height: $grid-unit;
+      width: $grid-unit;
     }
 
     &[disabled] {

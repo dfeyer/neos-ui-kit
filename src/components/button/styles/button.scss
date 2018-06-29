@@ -9,6 +9,8 @@
     border: 0;
     box-sizing: border-box;
     cursor: pointer;
+    height: $grid-unit;
+    line-height: $grid-unit;
 
     transition: all ease-in-out 100ms;
   }

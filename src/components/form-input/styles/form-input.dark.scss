@@ -15,7 +15,7 @@
     outline: 1px solid neos-color($colors-dark, 'neutral');
     color: inherit;
 
-    padding: $content-padding-medium;
+    padding: 0 $content-padding;
     margin: $content-margin-medium 0;
 
     &:focus,
