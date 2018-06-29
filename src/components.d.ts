@@ -28,7 +28,7 @@ declare global {
 
   namespace StencilComponents {
     interface NeosBadge {
-      'label': string;
+
     }
   }
 
@@ -51,7 +51,7 @@ declare global {
   }
   namespace JSXElements {
     export interface NeosBadgeAttributes extends HTMLAttributes {
-      'label'?: string;
+
     }
   }
 }

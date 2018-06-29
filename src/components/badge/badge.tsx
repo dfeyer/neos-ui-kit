@@ -1,4 +1,4 @@
-import {Component, Prop} from '@stencil/core';
+import {Component} from '@stencil/core';
 
 @Component({
   tag: 'neos-badge',
@@ -6,10 +6,7 @@ import {Component, Prop} from '@stencil/core';
   shadow: true
 })
 export class Badge {
-
-  @Prop() label: string;
-
   render() {
-    return this.label;
+    return <div><slot /></div>;
   }
 }
