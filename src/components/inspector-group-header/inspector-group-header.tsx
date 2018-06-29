@@ -11,7 +11,7 @@ export class InspectorGroupHeader {
 
   render() {
     return (<header>
-      <neos-icon squared name={this.icon}></neos-icon>
+      <neos-icon squared name={this.icon} type="solid"></neos-icon>
       <neos-label theme="bold" label={this.label}></neos-label>
       <div class="toggle">
         <neos-button squared theme="transparent">
