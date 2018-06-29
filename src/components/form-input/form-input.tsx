@@ -249,12 +249,9 @@ export class FormInput {
   render() {
     return (
       <label>
-        <div class="label">
-          <neos-label label={this.label}></neos-label>
-          <div class="metadata">
-            <slot name="metadata"/>
-          </div>
-        </div>
+        <neos-form-input-label label={this.label}>
+          <slot name="metadata"/>
+        </neos-form-input-label>
         <div class="input">
           <slot name="before"/>
           <input
