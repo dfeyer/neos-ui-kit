@@ -10,11 +10,14 @@ export class FormInput {
   @Prop() placeholder: string;
   @Prop() value: string;
   @Prop() label: string;
+  @Prop() type: string = 'text';
+  @Prop() disabled: boolean = false;
 
   renderInput() {
     return (<input
       placeholder={this.placeholder}
-      type="text"
+      type={this.type}
+      disabled={this.disabled}
       value={this.value}
     />)
   }
@@ -22,8 +25,15 @@ export class FormInput {
   renderInputWithLabel() {
     return (
       <label>
-        <neos-label label={this.label}></neos-label>
-        {this.renderInput()}
+        <div class="label">
+          <neos-label label={this.label}></neos-label>
+          <div class="metadata">
+            <slot name="metadata" />
+          </div>
+        </div>
+        <div class="input">
+          {this.renderInput()}
+        </div>
       </label>
     );
   }

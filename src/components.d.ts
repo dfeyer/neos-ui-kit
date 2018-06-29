@@ -106,8 +106,10 @@ declare global {
 
   namespace StencilComponents {
     interface NeosFormInput {
+      'disabled': boolean;
       'label': string;
       'placeholder': string;
+      'type': string;
       'value': string;
     }
   }
@@ -131,8 +133,10 @@ declare global {
   }
   namespace JSXElements {
     export interface NeosFormInputAttributes extends HTMLAttributes {
+      'disabled'?: boolean;
       'label'?: string;
       'placeholder'?: string;
+      'type'?: string;
       'value'?: string;
     }
   }
