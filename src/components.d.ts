@@ -113,6 +113,74 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface NeosDropdown {
+      'label': string;
+      'theme': string;
+    }
+  }
+
+  interface HTMLNeosDropdownElement extends StencilComponents.NeosDropdown, HTMLStencilElement {}
+
+  var HTMLNeosDropdownElement: {
+    prototype: HTMLNeosDropdownElement;
+    new (): HTMLNeosDropdownElement;
+  };
+  interface HTMLElementTagNameMap {
+    'neos-dropdown': HTMLNeosDropdownElement;
+  }
+  interface ElementTagNameMap {
+    'neos-dropdown': HTMLNeosDropdownElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'neos-dropdown': JSXElements.NeosDropdownAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NeosDropdownAttributes extends HTMLAttributes {
+      'label'?: string;
+      'theme'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface NeosFormInputLabel {
+      'label': string;
+    }
+  }
+
+  interface HTMLNeosFormInputLabelElement extends StencilComponents.NeosFormInputLabel, HTMLStencilElement {}
+
+  var HTMLNeosFormInputLabelElement: {
+    prototype: HTMLNeosFormInputLabelElement;
+    new (): HTMLNeosFormInputLabelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'neos-form-input-label': HTMLNeosFormInputLabelElement;
+  }
+  interface ElementTagNameMap {
+    'neos-form-input-label': HTMLNeosFormInputLabelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'neos-form-input-label': JSXElements.NeosFormInputLabelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NeosFormInputLabelAttributes extends HTMLAttributes {
+      'label'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface NeosFormInput {
       /**
        * If the value of the type attribute is `"file"`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers.
