@@ -15,7 +15,7 @@ exports.config = {
     },
     {
       type: 'www',
-      serviceWorker: false,
+      serviceWorker: true,
       baseUrl: '/neos-ui-kit/'
     }
   ]
