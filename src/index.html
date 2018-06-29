@@ -19,6 +19,7 @@
     h2 {
       font-size: 18px;
       text-transform: lowercase;
+      opacity: .6;
     }
     section {
       border-top: 4px solid white;
@@ -233,6 +234,13 @@
         <neos-icon squared name="at" type="solid" theme="neutral" slot="before"></neos-icon>
         <neos-icon squared name="check-circle" type="solid" theme="success" slot="after"></neos-icon>
       </neos-form-input>
+    </neos-inspector-group>
+    <neos-inspector-group icon="cogs" label="Ownership" closed>
+      <neos-form-input label="Author"></neos-form-input>
+      <neos-form-input label="Email"></neos-form-input>
+      <neos-form-input label="Phone"></neos-form-input>
+      <neos-form-input label="Creation date"></neos-form-input>
+      <neos-form-input label="Last modification date"></neos-form-input>
     </neos-inspector-group>
   </section>
 </section>

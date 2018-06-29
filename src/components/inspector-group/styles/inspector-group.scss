@@ -13,4 +13,13 @@
   .toggle {
     margin-left: auto;
   }
+
+  .content-wrapper {
+    overflow: hidden;
+    height: auto;
+
+    &--closed {
+      height: 0;
+    }
+  }
 }
