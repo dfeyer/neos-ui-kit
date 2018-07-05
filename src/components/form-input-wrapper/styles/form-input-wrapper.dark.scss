@@ -1,0 +1,19 @@
+@import "./form-input-wrapper";
+@import "./form-input-wrapper.dark.vars";
+
+:host {
+  display: flex;
+  color: $text-dark-color-value;
+  font-family: $font-family-dark-base;
+  font-weight: 400;
+  font-size: $font-size-dark-base;
+  line-height: 1.1;
+
+  .label-wrapper {
+    flex: 1;
+  }
+
+  .metadata {
+    margin-left: auto;
+  }
+}

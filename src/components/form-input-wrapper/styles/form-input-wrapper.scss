@@ -1,0 +1,10 @@
+@import "./form-input-wrapper.vars";
+
+:host {
+  @include font-smoothing();
+}
+
+.label-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
