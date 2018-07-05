@@ -113,6 +113,47 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface NeosDropdownHeader {
+      'hovered': boolean;
+      'label': string;
+      'open': boolean;
+      'placeholder': string;
+      'selectedLabel': string;
+    }
+  }
+
+  interface HTMLNeosDropdownHeaderElement extends StencilComponents.NeosDropdownHeader, HTMLStencilElement {}
+
+  var HTMLNeosDropdownHeaderElement: {
+    prototype: HTMLNeosDropdownHeaderElement;
+    new (): HTMLNeosDropdownHeaderElement;
+  };
+  interface HTMLElementTagNameMap {
+    'neos-dropdown-header': HTMLNeosDropdownHeaderElement;
+  }
+  interface ElementTagNameMap {
+    'neos-dropdown-header': HTMLNeosDropdownHeaderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'neos-dropdown-header': JSXElements.NeosDropdownHeaderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NeosDropdownHeaderAttributes extends HTMLAttributes {
+      'hovered'?: boolean;
+      'label'?: string;
+      'open'?: boolean;
+      'placeholder'?: string;
+      'selectedLabel'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface NeosDropdownItem {
       'icon': string;
       'iconType': string;

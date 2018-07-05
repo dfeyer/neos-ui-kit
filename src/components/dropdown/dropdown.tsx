@@ -13,12 +13,22 @@ export class Dropdown {
   @Prop() placeholder: string = 'Select a value...';
 
   @State() isOpen: boolean = false;
+  @State() isHovered: boolean = false;
   @State() activeLabel: string;
 
   @Listen('neosItemSelected')
   neosItemSelectedHandler(event: CustomEvent) {
     this.activeLabel = event.detail;
     this.isOpen = false;
+    this.isHovered = false;
+  }
+
+  mouseEnterHandler() {
+    this.isHovered = true;
+  }
+
+  mouseLeaveHandler() {
+    this.isHovered = false;
   }
 
   componentWillLoad() {
@@ -36,27 +46,25 @@ export class Dropdown {
 
   render() {
     return (
-      <div>
+      <div
+        onMouseEnter={() => this.mouseEnterHandler()}
+        onMouseLeave={() => this.mouseLeaveHandler()}
+      >
         <neos-form-input-wrapper label={this.label}>
-          <slot name="metadata"/>
-          <slot name="before"/>
+          <slot name="metadata" slot="metadata"/>
+          <slot name="before" slot="before"/>
           <div class={this.wrapperClassName()}>
-            <a href="#" class="dropdown" onClick={(e) => this.toggle(e)}>
-              <div class="icon">
-                <neos-icon name="file"/>
-              </div>
-              <div class="selected-label">{this.activeLabel ? this.activeLabel : this.placeholder}</div>
-              <div class="toggle">
-                <neos-button squared theme="transparent">
-                  <neos-icon name="chevron-down" type="solid"></neos-icon>
-                </neos-button>
-              </div>
-            </a>
+            <neos-dropdown-header
+              label={this.activeLabel ? this.activeLabel : this.placeholder}
+              open={this.isOpen}
+              hovered={this.isHovered && this.isOpen === false}
+              onClick={(e) => this.toggle(e)}
+            ></neos-dropdown-header>
             <div class="dropdown-list">
               <slot/>
             </div>
           </div>
-          <slot name="after"/>
+          <slot name="after" slot="after"/>
         </neos-form-input-wrapper>
       </div>
     );

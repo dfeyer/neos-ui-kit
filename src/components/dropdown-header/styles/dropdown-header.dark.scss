@@ -1,0 +1,30 @@
+@import "./dropdown-header";
+@import "./dropdown-header.dark.vars";
+
+:host {
+  color: $text-dark-color-value;
+  font-family: $font-family-dark-base;
+  font-weight: 400;
+  font-size: $font-size-dark-base;
+  line-height: 1.1;
+
+  .dropdown {
+    display: flex;
+    color: inherit;
+    background-color: $background-dark-color;
+    border: 0;
+    outline: 1px solid neos-color($colors-dark, 'darker');
+    box-sizing: content-box;
+    padding: 0 0 0 $content-padding;
+    text-decoration: none;
+    height: $grid-unit;
+  }
+
+  .icon {
+    margin-right: .65em;
+  }
+
+  .toggle {
+    margin-left: auto;
+  }
+}

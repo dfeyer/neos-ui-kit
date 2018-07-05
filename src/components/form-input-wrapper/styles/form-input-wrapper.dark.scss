@@ -17,11 +17,6 @@
   .metadata {
     margin-left: auto;
     margin-right: 1px;
-
-    ::slotted(neos-badge) {
-      margin-right: 0;
-      margin-left: 6px;
-    }
   }
 
   .content {
@@ -29,13 +24,18 @@
     align-items: center;
     flex: 1 0 100%;
     margin-top: $content-margin-medium;
+  }
 
-    slot[name="before"]::slotted(*) {
-      margin-right: 2px;
-    }
+  slot[name="metadata"]::slotted(neos-badge) {
+    margin-right: 0;
+    margin-left: 6px;
+  }
 
-    slot[name="after"]::slotted(*) {
-      margin-left: 2px;
-    }
+  slot[name="before"]::slotted(*) {
+    margin-right: 2px;
+  }
+
+  slot[name="after"]::slotted(*) {
+    margin-left: 2px;
   }
 }

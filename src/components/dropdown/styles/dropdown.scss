@@ -9,14 +9,4 @@
     flex: 1;
   }
 
-  .dropdown {
-    flex: 1;
-    border: 0;
-    box-sizing: border-box;
-    height: $grid-unit;
-    line-height: $grid-unit;
-
-    transition: all ease-in 80ms;
-  }
-
 }
