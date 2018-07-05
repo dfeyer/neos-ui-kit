@@ -37,9 +37,9 @@ export class Dropdown {
   render() {
     return (
       <div>
-        <neos-form-input-label label={this.label}>
+        <neos-form-input-wrapper label={this.label}>
           <slot name="metadata"/>
-        </neos-form-input-label>
+        </neos-form-input-wrapper>
         <div class={this.wrapperClassName()}>
           <a href="#" class="dropdown" onClick={(e) => this.toggle(e)}>
             <div class="icon">

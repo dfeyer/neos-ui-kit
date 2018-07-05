@@ -21,11 +21,11 @@
       text-transform: lowercase;
       opacity: .6;
     }
-    section {
+    section[role=presentation] {
       border-top: 4px solid white;
       margin-bottom: 40px;
     }
-    section section {
+    section[role=presentation] section[role=presentation] {
       border-top: 0;
       margin-bottom: 20px;
     }
@@ -153,7 +153,7 @@
   <header>
     <h1>neos-icon</h1>
   </header>
-  <section>
+  <section role="presentation">
     <header>
       <h2>default</h2>
     </header>

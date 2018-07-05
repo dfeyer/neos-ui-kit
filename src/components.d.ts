@@ -188,30 +188,30 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface NeosFormInputLabel {
+    interface NeosFormInputWrapper {
       'label': string;
     }
   }
 
-  interface HTMLNeosFormInputLabelElement extends StencilComponents.NeosFormInputLabel, HTMLStencilElement {}
+  interface HTMLNeosFormInputWrapperElement extends StencilComponents.NeosFormInputWrapper, HTMLStencilElement {}
 
-  var HTMLNeosFormInputLabelElement: {
-    prototype: HTMLNeosFormInputLabelElement;
-    new (): HTMLNeosFormInputLabelElement;
+  var HTMLNeosFormInputWrapperElement: {
+    prototype: HTMLNeosFormInputWrapperElement;
+    new (): HTMLNeosFormInputWrapperElement;
   };
   interface HTMLElementTagNameMap {
-    'neos-form-input-label': HTMLNeosFormInputLabelElement;
+    'neos-form-input-wrapper': HTMLNeosFormInputWrapperElement;
   }
   interface ElementTagNameMap {
-    'neos-form-input-label': HTMLNeosFormInputLabelElement;
+    'neos-form-input-wrapper': HTMLNeosFormInputWrapperElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'neos-form-input-label': JSXElements.NeosFormInputLabelAttributes;
+      'neos-form-input-wrapper': JSXElements.NeosFormInputWrapperAttributes;
     }
   }
   namespace JSXElements {
-    export interface NeosFormInputLabelAttributes extends HTMLAttributes {
+    export interface NeosFormInputWrapperAttributes extends HTMLAttributes {
       'label'?: string;
     }
   }
