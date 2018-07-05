@@ -7,12 +7,14 @@
   margin-top: -1px;
 
   .content-wrapper {
-    transition: max-height 600ms ease-in-out;
+    transition: max-height 400ms ease-in-out, opacity 500ms ease-in-out;
     max-height: 0;
+    opacity: 0;
 
     &--open {
       max-height: 1000px;
       height: auto;
+      opacity: 1;
     }
   }
 

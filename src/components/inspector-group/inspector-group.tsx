@@ -44,7 +44,11 @@ export class InspectorGroup {
 
   render() {
     return (<section role="group">
-      <neos-inspector-group-header icon={this.icon} label={this.label} open={this.isOpen}></neos-inspector-group-header>
+      <neos-inspector-group-header
+        icon={this.icon}
+        label={this.label}
+        open={this.isOpen}
+      ></neos-inspector-group-header>
       <div class={this.wrapperClassName()}>
         <div class="content">
           <slot/>
