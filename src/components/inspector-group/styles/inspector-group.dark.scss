@@ -17,6 +17,6 @@
   }
 
   .content {
-    padding: $content-padding
+    padding: $content-padding $content-padding-small;
   }
 }

@@ -9,27 +9,6 @@
   line-height: 1.1;
   margin-bottom: $content-dark-margin;
 
-  .input ::slotted(neos-icon:first-child) {
-    margin-right: 4px;
-  }
-
-  .input ::slotted(neos-icon:last-child) {
-    margin-left: 4px;
-  }
-
-  .input ::slotted(neos-button:first-child) {
-    margin-right: 4px;
-  }
-
-  .input ::slotted(neos-button:last-child) {
-    margin-left: 4px;
-  }
-
-  .metadata ::slotted(neos-badge) {
-    margin-right: 0;
-    margin-left: 4px;
-  }
-
   input {
     background-color: $background-dark-color;
     border: 0;
@@ -39,7 +18,6 @@
     color: inherit;
 
     padding: 0 $content-padding;
-    margin: $content-margin-medium 0;
 
     &:focus:enabled,
     &:hover:enabled {
