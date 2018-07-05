@@ -9,10 +9,10 @@
   .content-wrapper {
     transition: max-height 600ms ease-in-out;
     max-height: 0;
-    overflow: hidden;
 
     &--open {
       max-height: 1000px;
+      height: auto;
     }
   }
 

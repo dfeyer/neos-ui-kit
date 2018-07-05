@@ -12,18 +12,34 @@ export class InspectorGroup {
   @Prop() closed: boolean = false;
 
   @State() isOpen : boolean;
+  @State() isVisible : boolean;
 
   @Listen('neosVisibilitySwitched')
   neosVisibilitySwitchedHandler(event: CustomEvent) {
     this.isOpen = event.detail;
+    this.queueVisibiltyChange();
   }
 
   componentDidLoad() {
     this.isOpen = !this.closed;
+    this.queueVisibiltyChange();
+  }
+
+  queueVisibiltyChange() {
+    if (this.isOpen) {
+      setTimeout(() => {
+        this.isVisible = true;
+      }, 200);
+    } else {
+      this.isVisible = false;
+    }
   }
 
   wrapperClassName() {
-    return classnames('content-wrapper', {'content-wrapper--open': this.isOpen});
+    return classnames('content-wrapper', {
+      'content-wrapper--open': this.isOpen,
+      'content-wrapper--visible': this.isVisible,
+    });
   }
 
   render() {

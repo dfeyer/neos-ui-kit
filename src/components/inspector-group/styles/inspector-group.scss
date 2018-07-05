@@ -15,11 +15,15 @@
   }
 
   .content-wrapper {
-    overflow: hidden;
     height: auto;
+    overflow: hidden;
 
-    &--closed {
+    &--open {
       height: 0;
+    }
+
+    &--visible {
+      overflow: visible;
     }
   }
 }

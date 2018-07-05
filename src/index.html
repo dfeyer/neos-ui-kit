@@ -68,20 +68,6 @@
       <neos-dropdown-item label="Product" icon="clipboard-list"></neos-dropdown-item>
     </neos-dropdown>
   </section>
-  <section role="presentation">
-    <header>
-      <h2>prefixed</h2>
-    </header>
-    <neos-dropdown label="Type" icon="file" selected-label="Page">
-      <neos-icon squared name="link" type="solid" theme="success" slot="before"></neos-icon>
-      <neos-dropdown-item label="Home" icon="home"></neos-dropdown-item>
-      <neos-dropdown-item label="Category" icon="file"></neos-dropdown-item>
-      <neos-dropdown-item label="Contact"></neos-dropdown-item>
-      <neos-dropdown-item label="Generic Page" icon="file"></neos-dropdown-item>
-      <neos-dropdown-item label="News" icon="rss"></neos-dropdown-item>
-      <neos-dropdown-item label="Product" icon="clipboard-list"></neos-dropdown-item>
-    </neos-dropdown>
-  </section>
 </section>
 
 <section role="presentation">
@@ -277,6 +263,15 @@
           <neos-icon name="sync" type="solid" disabled></neos-icon>
         </neos-button>
       </neos-form-input>
+      <neos-dropdown label="Type" icon="file" selected-label="Page">
+        <neos-icon squared name="link" type="solid" theme="success" slot="before"></neos-icon>
+        <neos-dropdown-item label="Home" icon="home"></neos-dropdown-item>
+        <neos-dropdown-item label="Category" icon="file"></neos-dropdown-item>
+        <neos-dropdown-item label="Contact"></neos-dropdown-item>
+        <neos-dropdown-item label="Generic Page" icon="file"></neos-dropdown-item>
+        <neos-dropdown-item label="News" icon="rss"></neos-dropdown-item>
+        <neos-dropdown-item label="Product" icon="clipboard-list"></neos-dropdown-item>
+      </neos-dropdown>
     </neos-inspector-group>
     <neos-inspector-group icon="cogs" label="SEO">
       <neos-form-input label="Descritption" placeholder="A short and meanigful description of the document"></neos-form-input>
