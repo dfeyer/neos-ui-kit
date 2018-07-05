@@ -8,54 +8,54 @@
   font-size: $font-size-dark-base;
   line-height: 1.1;
   margin-bottom: $content-dark-margin;
-}
 
-.input ::slotted(neos-icon:first-child) {
-  margin-right: 4px;
-}
-
-.input ::slotted(neos-icon:last-child) {
-  margin-left: 4px;
-}
-
-.input ::slotted(neos-button:first-child) {
-  margin-right: 4px;
-}
-
-.input ::slotted(neos-button:last-child) {
-  margin-left: 4px;
-}
-
-.metadata ::slotted(neos-badge) {
-  margin-right: 0;
-  margin-left: 4px;
-}
-
-input {
-  background-color: $background-dark-color;
-  border: 0;
-  outline: 1px solid transparent;
-  outline-offset: 0;
-  box-sizing: content-box;
-  color: inherit;
-
-  padding: 0 $content-padding;
-  margin: $content-margin-medium 0;
-
-  &:focus:enabled,
-  &:hover:enabled {
-    outline: 2px solid neos-color($colors-dark, 'primary');
-    outline-offset: -2px;
+  .input ::slotted(neos-icon:first-child) {
+    margin-right: 4px;
   }
 
-  &:focus:enabled {
-    background-color: neos-color($colors-dark, 'brightest');
-    color: neos-color($colors-dark, 'brightest', 'contrast');
-    outline: 2px solid neos-color($colors-dark, 'brightest');
+  .input ::slotted(neos-icon:last-child) {
+    margin-left: 4px;
   }
 
-  &[disabled] {
-    cursor: not-allowed;
-    opacity: .85;
+  .input ::slotted(neos-button:first-child) {
+    margin-right: 4px;
+  }
+
+  .input ::slotted(neos-button:last-child) {
+    margin-left: 4px;
+  }
+
+  .metadata ::slotted(neos-badge) {
+    margin-right: 0;
+    margin-left: 4px;
+  }
+
+  input {
+    background-color: $background-dark-color;
+    border: 0;
+    outline: 1px solid transparent;
+    outline-offset: 0;
+    box-sizing: content-box;
+    color: inherit;
+
+    padding: 0 $content-padding;
+    margin: $content-margin-medium 0;
+
+    &:focus:enabled,
+    &:hover:enabled {
+      outline: 2px solid neos-color($colors-dark, 'primary');
+      outline-offset: -2px;
+    }
+
+    &:focus:enabled {
+      background-color: neos-color($colors-dark, 'brightest');
+      color: neos-color($colors-dark, 'brightest', 'contrast');
+      outline: 2px solid neos-color($colors-dark, 'brightest');
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: .85;
+    }
   }
 }

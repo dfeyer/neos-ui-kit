@@ -2,9 +2,10 @@
 
 :host {
   @include font-smoothing();
-}
 
-.label-wrapper {
-  display: flex;
-  align-items: flex-end;
+  .label-wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+
 }

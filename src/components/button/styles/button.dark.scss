@@ -7,80 +7,81 @@
   font-weight: 400;
   font-size: $font-size-dark-base;
   line-height: 1.1;
-}
 
-::slotted(neos-icon) {
-  margin-right: $content-margin-small;
-}
-
-button {
-  background-color: neos-color($colors-dark, 'neutral');
-  border: 0;
-  color: neos-color($colors-dark, 'neutral', 'contrast');
-
-  padding: 0 $content-padding;
-  margin: 0;
-
-  &:focus:enabled,
-  &:hover:enabled {
-    background-color: neos-color($colors-dark, 'primary', 'shade');
+  ::slotted(neos-icon) {
+    margin-right: $content-margin-small;
   }
 
-  &.t-clean {
-    background-color: neos-color($colors-dark, 'success');
+  button {
+    background-color: neos-color($colors-dark, 'neutral');
+    border: 0;
+    color: neos-color($colors-dark, 'neutral', 'contrast');
 
-    &:focus:enabled,
-    &:hover:enabled {
-      background-color: neos-color($colors-dark, 'success', 'shade');
-    }
-  }
-
-  &.t-brand {
-    background-color: neos-color($colors-dark, 'primary');
+    padding: 0 $content-padding;
+    margin: 0;
 
     &:focus:enabled,
     &:hover:enabled {
       background-color: neos-color($colors-dark, 'primary', 'shade');
     }
-  }
 
-  &.t-lighter {
-    background-color: neos-color($colors-dark, 'secondary');
+    &.t-clean {
+      background-color: neos-color($colors-dark, 'success');
 
-    &:focus:enabled,
-    &:hover:enabled {
-      background-color: neos-color($colors-dark, 'secondary', 'shade');
+      &:focus:enabled,
+      &:hover:enabled {
+        background-color: neos-color($colors-dark, 'success', 'shade');
+      }
+    }
+
+    &.t-brand {
+      background-color: neos-color($colors-dark, 'primary');
+
+      &:focus:enabled,
+      &:hover:enabled {
+        background-color: neos-color($colors-dark, 'primary', 'shade');
+      }
+    }
+
+    &.t-lighter {
+      background-color: neos-color($colors-dark, 'secondary');
+
+      &:focus:enabled,
+      &:hover:enabled {
+        background-color: neos-color($colors-dark, 'secondary', 'shade');
+      }
+    }
+
+    &.t-transparent {
+      background-color: transparent;
+
+      &:focus:enabled,
+      &:hover:enabled {
+        background-color: neos-color($colors-dark, 'primary', 'shade');
+      }
+    }
+
+    &.t-warn {
+      background-color: neos-color($colors-dark, 'warning');
+
+      &:focus:enabled,
+      &:hover:enabled {
+        background-color: neos-color($colors-dark, 'warning', 'shade');
+      }
+    }
+
+    &.l-squared {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: $grid-unit;
+      width: $grid-unit;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: .65;
     }
   }
 
-  &.t-transparent {
-    background-color: transparent;
-
-    &:focus:enabled,
-    &:hover:enabled {
-      background-color: neos-color($colors-dark, 'primary', 'shade');
-    }
-  }
-
-  &.t-warn {
-    background-color: neos-color($colors-dark, 'warning');
-
-    &:focus:enabled,
-    &:hover:enabled {
-      background-color: neos-color($colors-dark, 'warning', 'shade');
-    }
-  }
-
-  &.l-squared {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: $grid-unit;
-    width: $grid-unit;
-  }
-
-  &[disabled] {
-    cursor: not-allowed;
-    opacity: .65;
-  }
 }

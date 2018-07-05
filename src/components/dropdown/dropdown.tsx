@@ -38,24 +38,25 @@ export class Dropdown {
     return (
       <div>
         <neos-form-input-wrapper label={this.label}>
-          <slot name="metadata"/>
-        </neos-form-input-wrapper>
-        <div class={this.wrapperClassName()}>
-          <a href="#" class="dropdown" onClick={(e) => this.toggle(e)}>
-            <div class="icon">
-              <neos-icon name="file"/>
+          <slot name="metadata" slot="metadata"/>
+          <slot name="before" slot="before"/>
+          <div className={this.wrapperClassName()}>
+            <a href="#" className="dropdown" onClick={(e) => this.toggle(e)}>
+              <div className="icon">
+                <neos-icon name="file"/>
+              </div>
+              <div className="selected-label">{this.activeLabel ? this.activeLabel : this.placeholder}</div>
+              <div className="toggle">
+                <neos-button squared theme="transparent">
+                  <neos-icon name="chevron-down" type="solid"></neos-icon>
+                </neos-button>
+              </div>
+            </a>
+            <div className="dropdown-list">
+              <slot/>
             </div>
-            <div class="selected-label">{this.activeLabel ? this.activeLabel : this.placeholder}</div>
-            <div class="toggle">
-              <neos-button squared theme="transparent">
-                <neos-icon name="chevron-down" type="solid"></neos-icon>
-              </neos-button>
-            </div>
-          </a>
-          <div class="dropdown-list">
-            <slot />
           </div>
-        </div>
+        </neos-form-input-wrapper>
       </div>
     );
   }

@@ -4,14 +4,19 @@
   @include font-smoothing();
 
   display: block;
-}
 
-.dropdown {
-  flex: 1;
-  border: 0;
-  box-sizing: border-box;
-  height: $grid-unit;
-  line-height: $grid-unit;
+  .dropdown-wrapper {
+    flex: 1;
+  }
 
-  transition: all ease-in 80ms;
+  .dropdown {
+    flex: 1;
+    border: 0;
+    box-sizing: border-box;
+    height: $grid-unit;
+    line-height: $grid-unit;
+
+    transition: all ease-in 80ms;
+  }
+
 }

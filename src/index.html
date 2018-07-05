@@ -43,8 +43,7 @@
 <body style="background-color: #222222; padding: 2rem;">
 
 <p class="disclaimer">This project is experimental and not an official Neos CMS project</p>
-
-<section>
+<section role="presentation">
   <header>
     <h1>neos-form-input</h1>
   </header>
@@ -52,26 +51,44 @@
   <neos-form-input label="Canonical title" placeholder="Help editor to fill me..."></neos-form-input>
   <neos-form-input label="URI Path Segment" value="nice-title-to-master-your-seo-skills" placeholder="Help editor to fill me..."></neos-form-input>
 </section>
-
-<section>
+<section role="presentation">
   <header>
     <h1>neos-form-dropdown</h1>
   </header>
-  <neos-dropdown label="Type" icon="file" selected-label="Page">
-    <neos-dropdown-item label="Home" icon="home"></neos-dropdown-item>
-    <neos-dropdown-item label="Category" icon="file"></neos-dropdown-item>
-    <neos-dropdown-item label="Contact"></neos-dropdown-item>
-    <neos-dropdown-item label="Generic Page" icon="file"></neos-dropdown-item>
-    <neos-dropdown-item label="News" icon="rss"></neos-dropdown-item>
-    <neos-dropdown-item label="Product" icon="clipboard-list"></neos-dropdown-item>
-  </neos-dropdown>
+  <section role="presentation">
+    <header>
+      <h2>default</h2>
+    </header>
+    <neos-dropdown label="Type" icon="file" selected-label="Page">
+      <neos-dropdown-item label="Home" icon="home"></neos-dropdown-item>
+      <neos-dropdown-item label="Category" icon="file"></neos-dropdown-item>
+      <neos-dropdown-item label="Contact"></neos-dropdown-item>
+      <neos-dropdown-item label="Generic Page" icon="file"></neos-dropdown-item>
+      <neos-dropdown-item label="News" icon="rss"></neos-dropdown-item>
+      <neos-dropdown-item label="Product" icon="clipboard-list"></neos-dropdown-item>
+    </neos-dropdown>
+  </section>
+  <section role="presentation">
+    <header>
+      <h2>prefixed</h2>
+    </header>
+    <neos-dropdown label="Type" icon="file" selected-label="Page">
+      <neos-icon squared name="link" type="solid" theme="success" slot="before"></neos-icon>
+      <neos-dropdown-item label="Home" icon="home"></neos-dropdown-item>
+      <neos-dropdown-item label="Category" icon="file"></neos-dropdown-item>
+      <neos-dropdown-item label="Contact"></neos-dropdown-item>
+      <neos-dropdown-item label="Generic Page" icon="file"></neos-dropdown-item>
+      <neos-dropdown-item label="News" icon="rss"></neos-dropdown-item>
+      <neos-dropdown-item label="Product" icon="clipboard-list"></neos-dropdown-item>
+    </neos-dropdown>
+  </section>
 </section>
 
-<section>
+<section role="presentation">
   <header>
     <h1>neos-badge</h1>
   </header>
-  <section>
+  <section role="presentation">
     <header>
       <h2>default</h2>
     </header>
@@ -88,11 +105,11 @@
   </section>
 </section>
 
-<section>
+<section role="presentation">
   <header>
     <h1>neos-button</h1>
   </header>
-  <section>
+  <section role="presentation">
     <header>
       <h2>default</h2>
     </header>
@@ -102,7 +119,7 @@
     <neos-button theme="warn">Delete</neos-button>
     <neos-button theme="warn" disabled>Delete</neos-button>
   </section>
-  <section>
+  <section role="presentation">
     <header>
       <h2>with icon</h2>
     </header>
@@ -127,7 +144,7 @@
       Delete
     </neos-button>
   </section>
-  <section>
+  <section role="presentation">
     <header>
       <h2>squared</h2>
     </header>
@@ -149,7 +166,7 @@
   </section>
 </section>
 
-<section>
+<section role="presentation">
   <header>
     <h1>neos-icon</h1>
   </header>
@@ -162,7 +179,7 @@
     <neos-icon name="edit"></neos-icon>
     <neos-icon name="edit" type="solid"></neos-icon>
   </section>
-  <section>
+  <section role="presentation">
     <header>
       <h2>squared</h2>
     </header>
@@ -173,11 +190,11 @@
   </section>
 </section>
 
-<section>
+<section role="presentation">
   <header>
     <h1>neos-toolbar</h1>
   </header>
-  <section>
+  <section role="presentation">
     <header>
       <h2>default</h2>
     </header>
@@ -206,7 +223,7 @@
       </neos-button>
     </neos-toolbar>
   </section>
-  <section>
+  <section role="presentation">
     <header>
       <h2>with dark theme</h2>
     </header>
@@ -237,11 +254,11 @@
   </section>
 </section>
 
-<section>
+<section role="presentation">
   <header>
     <h1>neos-inspector-group</h1>
   </header>
-  <section>
+  <section role="presentation">
     <header>
       <h2>default</h2>
     </header>

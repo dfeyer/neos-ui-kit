@@ -7,31 +7,33 @@
   font-weight: 400;
   font-size: $font-size-dark-base;
   line-height: 1.1;
-}
 
-.dropdown-item {
-  display: flex;
-  background-color: $background-dark-color;
-  border: 0;
-  outline: 1px solid neos-color($colors-dark, 'darker');
-  box-sizing: content-box;
-  color: inherit;
-  padding: 0 0 0 $content-padding;
-  text-decoration: none;
+  .dropdown-item {
+    display: flex;
+    background-color: $background-dark-color;
+    border: 0;
+    outline: 1px solid neos-color($colors-dark, 'darker');
+    box-sizing: content-box;
+    color: inherit;
+    padding: 0 0 0 $content-padding;
+    text-decoration: none;
 
-  &:hover {
-    background-color: neos-color($colors-dark, 'primary');
+    &:hover {
+      background-color: neos-color($colors-dark, 'primary');
+    }
+  }
+
+  .icon {
+    margin-right: .65em;
+  }
+
+  .toggle {
+    margin-left: auto;
+  }
+
+  .selected-value {
+
   }
 }
 
-.icon {
-  margin-right: .65em;
-}
 
-.toggle {
-  margin-left: auto;
-}
-
-.selected-value {
-
-}
