@@ -18,6 +18,11 @@ export class FormInputWrapper {
         <div class="metadata">
           <slot name="metadata"/>
         </div>
+        <div class="content">
+          <slot name="before"/>
+          <slot/>
+          <slot name="after"/>
+        </div>
       </div>
     );
   }

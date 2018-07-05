@@ -34,7 +34,8 @@
 input {
   background-color: $background-dark-color;
   border: 0;
-  outline: 1px solid neos-color($colors-dark, 'darker');
+  outline: 1px solid transparent;
+  outline-offset: 0;
   box-sizing: content-box;
   color: inherit;
 
@@ -43,7 +44,8 @@ input {
 
   &:focus:enabled,
   &:hover:enabled {
-    outline: 1px solid neos-color($colors-dark, 'primary');
+    outline: 2px solid neos-color($colors-dark, 'primary');
+    outline-offset: -2px;
   }
 
   &:focus:enabled {

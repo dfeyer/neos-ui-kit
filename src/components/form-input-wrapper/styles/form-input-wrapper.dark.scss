@@ -11,9 +11,16 @@
 
   .label-wrapper {
     flex: 1;
+    flex-wrap: wrap;
   }
 
   .metadata {
     margin-left: auto;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex: 1 0 100%;
   }
 }
