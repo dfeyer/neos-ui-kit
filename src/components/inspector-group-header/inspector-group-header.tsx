@@ -37,7 +37,7 @@ export class InspectorGroupHeader {
   render() {
     return (<header
       onMouseEnter={() => this.mouseEnterHandler()}
-      onmouseleave={() => this.mouseLeaveHandler()}
+      onMouseLeave={() => this.mouseLeaveHandler()}
       onClick={() => this.neosVisibilitySwitchedHandlerHandler()}
     >
       <neos-icon squared name={this.icon} type="solid"></neos-icon>

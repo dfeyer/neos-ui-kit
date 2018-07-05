@@ -250,8 +250,8 @@ export class FormInput {
     return (
       <label>
         <neos-form-input-wrapper label={this.label}>
-          <slot name="metadata" slot="metadata"/>
-          <slot name="before" slot="before"/>
+          <slot name="metadata"/>
+          <slot name="before"/>
           <input
             ref={input => this.nativeInput = input as any}
             aria-disabled={this.disabled ? 'true' : false}
@@ -283,7 +283,7 @@ export class FormInput {
             onFocus={this.onFocus.bind(this)}
             onKeyDown={this.inputKeydown.bind(this)}
           />
-          <slot name="after" slot="after"/>
+          <slot name="after"/>
         </neos-form-input-wrapper>
       </label>
     );
