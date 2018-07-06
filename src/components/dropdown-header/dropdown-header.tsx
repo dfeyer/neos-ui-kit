@@ -23,7 +23,7 @@ export class Dropdown {
 
   render() {
     return (
-      <a href="#" class="dropdown">
+      <a href="#">
         <div class="icon">
           <neos-icon name="file"/>
         </div>

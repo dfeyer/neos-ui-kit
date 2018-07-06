@@ -19,10 +19,10 @@ export class DropdownItem {
 
   render() {
     return (
-      <a href="#" class="dropdown-item" onClick={(e) => this.neosItemSelectedHandler(e)}>
-        { this.icon ? <div class="icon">
-          <neos-icon name={this.icon} type={this.iconType}/>
-        </div> : null }
+      <a href="#" class="item" onClick={(e) => this.neosItemSelectedHandler(e)}>
+        <div class="icon">
+          { this.icon ? <neos-icon name={this.icon} type={this.iconType}/> : null }
+        </div>
         <div class="selected-label">{this.label}</div>
       </a>
     );

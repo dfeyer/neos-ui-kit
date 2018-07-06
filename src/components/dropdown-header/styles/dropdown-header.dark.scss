@@ -8,7 +8,7 @@
   font-size: $font-size-dark-base;
   line-height: 1.1;
 
-  .dropdown {
+  > a {
     display: flex;
     color: inherit;
     background-color: $background-dark-color;
@@ -22,9 +22,15 @@
 
   .icon {
     margin-right: .65em;
+    line-height: $grid-unit;
+    width: $grid-unit / 2;
   }
 
   .toggle {
     margin-left: auto;
+  }
+
+  .selected-label {
+    line-height: $grid-unit;
   }
 }

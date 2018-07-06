@@ -1,4 +1,4 @@
-import {Component, Prop, State, Listen} from '@stencil/core';
+import {Component, Event, EventEmitter, Method, Prop, State, Listen} from '@stencil/core';
 import classnames from 'classnames';
 
 @Component({
@@ -7,6 +7,8 @@ import classnames from 'classnames';
   shadow: true
 })
 export class Dropdown {
+  @Event() neosOpen: EventEmitter;
+  @Event() neosClose: EventEmitter;
 
   @Prop() label: string;
   @Prop() selectedLabel: string;
@@ -16,17 +18,25 @@ export class Dropdown {
   @State() isHovered: boolean = false;
   @State() activeLabel: string;
 
+  neosOpenHandler() {
+    this.neosOpen.emit();
+  }
+
+  neosCloseHandler() {
+    this.neosClose.emit();
+  }
+
   @Listen('neosItemSelected')
   neosItemSelectedHandler(event: CustomEvent) {
     this.activeLabel = event.detail;
-    this.isOpen = false;
-    this.isHovered = false;
   }
 
+  @Listen('mouseenter')
   mouseEnterHandler() {
     this.isHovered = true;
   }
 
+  @Listen('mouseleave')
   mouseLeaveHandler() {
     this.isHovered = false;
   }
@@ -38,35 +48,59 @@ export class Dropdown {
   toggle(e) {
     e.preventDefault();
     this.isOpen = !this.isOpen;
+    this.handleVisibilityChange();
+  }
+
+  handleVisibilityChange() {
+    if (this.isOpen) {
+      this.neosOpenHandler();
+      setTimeout(() => {
+        document.addEventListener('click', () => this.clickOutsideHandler(this), {once: true});
+      }, 200);
+    } else {
+      this.neosCloseHandler();
+    }
+  }
+
+  clickOutsideHandler(component) {
+    component.close();
+  }
+
+  @Method()
+  close() {
+    this.isOpen = false;
+    this.isHovered = false;
+    this.handleVisibilityChange();
+  }
+
+  @Method()
+  open() {
+    this.isOpen = true;
+    this.handleVisibilityChange();
   }
 
   wrapperClassName() {
-    return classnames('dropdown-wrapper', {'dropdown-wrapper--open': this.isOpen});
+    return classnames('wrapper', {'wrapper--open': this.isOpen});
   }
 
   render() {
     return (
-      <div
-        onMouseEnter={() => this.mouseEnterHandler()}
-        onMouseLeave={() => this.mouseLeaveHandler()}
-      >
-        <neos-form-input-wrapper label={this.label}>
-          <slot name="metadata" slot="metadata"/>
-          <slot name="before" slot="before"/>
-          <div class={this.wrapperClassName()}>
-            <neos-dropdown-header
-              label={this.activeLabel ? this.activeLabel : this.placeholder}
-              open={this.isOpen}
-              hovered={this.isHovered && this.isOpen === false}
-              onClick={(e) => this.toggle(e)}
-            ></neos-dropdown-header>
-            <div class="dropdown-list">
-              <slot/>
-            </div>
+      <neos-form-input-wrapper label={this.label}>
+        <slot name="metadata" slot="metadata"/>
+        <slot name="before" slot="before"/>
+        <div class={this.wrapperClassName()}>
+          <neos-dropdown-header
+            label={this.activeLabel ? this.activeLabel : this.placeholder}
+            open={this.isOpen}
+            hovered={this.isHovered && this.isOpen === false}
+            onClick={(e) => this.toggle(e)}
+          ></neos-dropdown-header>
+          <div class="list">
+            <slot/>
           </div>
-          <slot name="after" slot="after"/>
-        </neos-form-input-wrapper>
-      </div>
+        </div>
+        <slot name="after" slot="after"/>
+      </neos-form-input-wrapper>
     );
   }
 }
