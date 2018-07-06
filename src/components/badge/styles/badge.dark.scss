@@ -8,20 +8,11 @@
   font-weight: 600;
   font-size: $font-size-dark-base;
   line-height: inherit;
-  margin-right: $content-margin-small;
   outline: 1px $background-dark-color solid;
   padding: $content-padding-small;
   cursor: default;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &.--compact {
+  .--compact {
     font-size: $font-size-dark-small;
-  }
-
-  &::slotted(*) {
-    margin-right: .25em;
   }
 }

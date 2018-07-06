@@ -11,9 +11,10 @@
   }
 
   fill: white;
-  vertical-align: middle;
-  vertical-align: -webkit-baseline-middle;
-  height: 100%;
+
+  > div {
+    display: flex;
+  }
 
   .t-regular {
     background-color: transparent;

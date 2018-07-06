@@ -6,6 +6,9 @@
   display: inline-block;
 
   button {
+    display: inline-flex;
+    align-items: center;
+
     border: 0;
     box-sizing: border-box;
     cursor: pointer;
@@ -13,5 +16,15 @@
     line-height: $grid-unit;
 
     transition: all ease-in-out 100ms;
+
+    ::slotted(neos-icon) {
+      margin-right: .4em;
+    }
+
+    &.l-squared {
+      ::slotted(neos-icon) {
+        margin-right: 0;
+      }  
+    }
   }
 }

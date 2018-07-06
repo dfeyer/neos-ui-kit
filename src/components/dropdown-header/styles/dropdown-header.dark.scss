@@ -21,6 +21,8 @@
   }
 
   .icon {
+    display: flex;
+    align-items: center;
     margin-right: .65em;
     line-height: $grid-unit;
     width: $grid-unit / 2;

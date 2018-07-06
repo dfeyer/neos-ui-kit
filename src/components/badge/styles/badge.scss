@@ -3,5 +3,10 @@
 :host {
   @include font-smoothing();
 
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+
+  ::slotted(neos-icon) {
+    margin-right: .4em;
+  }
 }

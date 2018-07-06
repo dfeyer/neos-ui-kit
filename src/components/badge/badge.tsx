@@ -11,14 +11,13 @@ export class Badge {
 
   @Prop() compact: boolean = false;
 
-  hostClassNames() {
-    this.el.className = classnames({
+  classNames() {
+    return classnames({
       '--compact': this.compact
     });
   }
 
   render() {
-    this.hostClassNames();
-    return <slot />;
+    return <span class={this.classNames()}><span class="label"><slot /></span></span>;
   }
 }
