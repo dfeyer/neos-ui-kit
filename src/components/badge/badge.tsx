@@ -1,4 +1,5 @@
-import {Component} from '@stencil/core';
+import {Component, Element, Prop} from '@stencil/core';
+import classnames from 'classnames';
 
 @Component({
   tag: 'neos-badge',
@@ -6,7 +7,18 @@ import {Component} from '@stencil/core';
   shadow: true
 })
 export class Badge {
+  @Element() el: HTMLElement;
+
+  @Prop() compact: boolean = false;
+
+  hostClassNames() {
+    this.el.className = classnames({
+      '--compact': this.compact
+    });
+  }
+
   render() {
-    return <div><slot /></div>;
+    this.hostClassNames();
+    return <slot />;
   }
 }

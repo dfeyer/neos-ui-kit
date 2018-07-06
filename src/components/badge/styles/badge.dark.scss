@@ -16,4 +16,12 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &.--compact {
+    font-size: $font-size-dark-small;
+  }
+
+  &::slotted(*) {
+    margin-right: .25em;
+  }
 }
