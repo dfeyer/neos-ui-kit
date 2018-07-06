@@ -1,4 +1,4 @@
-import {Component, Prop} from '@stencil/core';
+import {Component, Element, Prop} from '@stencil/core';
 import classnames from 'classnames';
 
 @Component({
@@ -7,25 +7,31 @@ import classnames from 'classnames';
   shadow: true
 })
 export class Icon {
+  @Element() el: HTMLElement;
 
   @Prop() name: string;
   @Prop() type: string = 'regular';
   @Prop() theme: string = 'regular';
+  @Prop() path: string = 'assets';
   @Prop() squared: boolean = false;
 
+  iconPath() {
+    return this.path + '/' + this.type + '.svg#' + this.name; 
+  }
+
   className() {
-    return classnames('t-' + this.theme, {'l-squared': this.squared});
-  }
-
-  iconClassName() {
-    return 'fa' + this.type.charAt(0) + ' ' + 'fa-' + this.name;
-  }
-
-  icon() {
-    return <i class={this.iconClassName()}></i>;
+    return classnames('t-' + this.theme, {
+      'l-squared': this.squared
+    });
   }
 
   render() {
-    return <div class={this.className()}>{this.icon()}</div>;
+    return (
+    <div class={this.className()}>
+      <svg>
+        <use xlinkHref={this.iconPath()}></use>
+      </svg>
+    </div>
+    );
   }
 }

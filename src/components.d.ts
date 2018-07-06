@@ -509,6 +509,7 @@ declare global {
   namespace StencilComponents {
     interface NeosIcon {
       'name': string;
+      'path': string;
       'squared': boolean;
       'theme': string;
       'type': string;
@@ -535,6 +536,7 @@ declare global {
   namespace JSXElements {
     export interface NeosIconAttributes extends HTMLAttributes {
       'name'?: string;
+      'path'?: string;
       'squared'?: boolean;
       'theme'?: string;
       'type'?: string;

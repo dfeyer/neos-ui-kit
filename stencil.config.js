@@ -9,6 +9,9 @@ exports.config = {
   plugins: [
     sass(),
   ],
+  copy: [
+    { src: 'assets' }
+  ],
   outputTargets:[
     {
       type: 'dist'

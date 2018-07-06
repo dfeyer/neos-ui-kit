@@ -5,28 +5,38 @@
   color: $text-dark-color-value;
   font-size: $font-size-dark-base;
 
+  svg {
+    width: $font-size-dark-large;
+    max-height: $font-size-dark-large;
+  }
+
+  fill: white;
+  vertical-align: middle;
+  vertical-align: -webkit-baseline-middle;
+  height: 100%;
+
   .t-regular {
     background-color: transparent;
-    color: white;
+    fill: white;
   }
 
   .t-neutral {
     background-color: neos-color($colors-dark, 'neutral');
-    color: neos-color($colors-dark, 'neutral', 'contrast');
+    fill: neos-color($colors-dark, 'neutral', 'contrast');
   }
 
   .t-success {
     background-color: neos-color($colors-dark, 'success');
-    color: neos-color($colors-dark, 'success', 'contrast');
+    fill: neos-color($colors-dark, 'success', 'contrast');
   }
 
   .t-warning {
     background-color: neos-color($colors-dark, 'warning');
-    color: neos-color($colors-dark, 'warning', 'contrast');
+    fill: neos-color($colors-dark, 'warning', 'contrast');
   }
 
   .t-danger {
     background-color: neos-color($colors-dark, 'danger');
-    color: neos-color($colors-dark, 'danger', 'contrast');
+    fill: neos-color($colors-dark, 'danger', 'contrast');
   }
 }
