@@ -36,7 +36,7 @@ declare global {
 
   namespace StencilComponents {
     interface NeosBadge {
-
+      'compact': boolean;
     }
   }
 
@@ -59,7 +59,7 @@ declare global {
   }
   namespace JSXElements {
     export interface NeosBadgeAttributes extends HTMLAttributes {
-
+      'compact'?: boolean;
     }
   }
 }
@@ -193,7 +193,9 @@ declare global {
 
   namespace StencilComponents {
     interface NeosDropdown {
+      'close': () => void;
       'label': string;
+      'open': () => void;
       'placeholder': string;
       'selectedLabel': string;
     }
@@ -219,6 +221,8 @@ declare global {
   namespace JSXElements {
     export interface NeosDropdownAttributes extends HTMLAttributes {
       'label'?: string;
+      'onNeosClose'?: (event: CustomEvent) => void;
+      'onNeosOpen'?: (event: CustomEvent) => void;
       'placeholder'?: string;
       'selectedLabel'?: string;
     }
@@ -581,9 +585,11 @@ declare global {
 
   namespace StencilComponents {
     interface NeosInspectorGroup {
+      'close': () => void;
       'closed': boolean;
       'icon': string;
       'label': string;
+      'open': () => void;
     }
   }
 
@@ -609,6 +615,8 @@ declare global {
       'closed'?: boolean;
       'icon'?: string;
       'label'?: string;
+      'onNeosClose'?: (event: CustomEvent) => void;
+      'onNeosOpen'?: (event: CustomEvent) => void;
     }
   }
 }

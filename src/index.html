@@ -82,12 +82,29 @@
     <neos-badge>France</neos-badge>
     <neos-badge>Germany</neos-badge>
   </section>
+  <section role="presentation">
+    <header>
+      <h2>compact</h2>
+    </header>
+    <neos-badge compact>Switzerland</neos-badge>
+    <neos-badge compact>France</neos-badge>
+    <neos-badge compact>Germany</neos-badge>
+  </section>
+  <section role="presentation">
     <header>
       <h2>with icons</h2>
     </header>
     <neos-badge><neos-icon name="frown"></neos-icon> Switzerland</neos-badge>
     <neos-badge><neos-icon name="frown"></neos-icon> France</neos-badge>
     <neos-badge><neos-icon name="frown"></neos-icon> Germany</neos-badge>
+  </section>
+  <section role="presentation">
+    <header>
+      <h2>with icons + compact</h2>
+    </header>
+    <neos-badge compact><neos-icon name="frown"></neos-icon> Switzerland</neos-badge>
+    <neos-badge compact><neos-icon name="frown"></neos-icon> France</neos-badge>
+    <neos-badge compact><neos-icon name="frown"></neos-icon> Germany</neos-badge>
   </section>
 </section>
 
@@ -250,15 +267,15 @@
     </header>
     <neos-inspector-group icon="file" label="Document">
       <neos-form-input label="Title" value="My good blog post">
-        <neos-badge slot="metadata">required</neos-badge>
+        <neos-badge compact slot="metadata">required</neos-badge>
       </neos-form-input>
       <neos-form-input label="Signed contract" type="file" accept="pdf">
-        <neos-badge slot="metadata">required</neos-badge>
-        <neos-badge slot="metadata">pdf</neos-badge>
+        <neos-badge compact slot="metadata">required</neos-badge>
+        <neos-badge compact slot="metadata">pdf</neos-badge>
       </neos-form-input>
       <neos-form-input label="URI Path Segement" disabled value="my-good-blog-post">
-        <neos-badge slot="metadata">readonly</neos-badge>
-        <neos-badge slot="metadata">computed</neos-badge>
+        <neos-badge compact slot="metadata">readonly</neos-badge>
+        <neos-badge compact slot="metadata">computed</neos-badge>
         <neos-button squared theme="primary" slot="after">
           <neos-icon name="sync" type="solid" disabled></neos-icon>
         </neos-button>
@@ -287,8 +304,9 @@
     </neos-inspector-group>
     <neos-inspector-group icon="cogs" label="Ownership" closed>
       <neos-form-input label="Author"></neos-form-input>
-      <neos-form-input label="Email"></neos-form-input>
-      <neos-form-input label="Phone"></neos-form-input>
+      <neos-form-input label="Email" type="email"></neos-form-input>
+      <neos-form-input label="Phone" type="phone"></neos-form-input>
+      <neos-form-input label="API Key" type="password"></neos-form-input>
       <neos-form-input label="Creation date"></neos-form-input>
       <neos-form-input label="Last modification date"></neos-form-input>
     </neos-inspector-group>
